@@ -1,0 +1,43 @@
+.header-button--opcion {
+    display: block;
+    width: 100%;
+    height: auto;
+    text-align: right;
+    padding-right: 30px;
+}
+.header-button--opcion span svg {
+    width: 40px;
+    height: auto;
+}
+.header-button--opcion span svg line {
+    stroke:white;
+    stroke-width: 1;
+}
+.product-cards--container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 768px;
+    margin: 0 auto;
+}
+
+.product-detail--card {
+    width: 100%;
+    height: auto;
+    max-width: 320px;
+    min-width: 200px;
+}
+.footer-section-container {
+    width: 100%;
+}
+.footer-section--main {
+    max-width: 100%;
+    display: flex;
+    margin: 0 auto;
+    max-width: 810px;
+}
+.footer-section--siguenos {
+    padding-top: 39px;
+}
+.footer-section--book {
+    margin-top: 6px;
+}
