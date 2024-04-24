@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mark Decord</title>
+    <link rel="stylesheet" href="./mobile.css">
+    <link rel="stylesheet" href="./style/tablet.css" media="(min-width: 768px)">
+    <link rel="stylesheet" href="./style/deskopt.css" media="(min-width: 1024px)">
+    <link rel="stylesheet" href="./style/full.css" media="(min-width: 1900px)">
+    <link rel="stylesheet" href="./style/quienes_somo.css">
+    <link rel="stylesheet" href="./style/catalogo.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <main>
+        <article class="container-main--artimg">
+            <h2>Descubre nuestra amplia gama de cortinas, tapizados, persianas y más para darle un nuevo aspecto a tu hogar. ¡Haz clic para empezar!</h2>
+            <div class="container-div--figuras">
+                <figure class="container-figure">
+                    <img src="./assets/img/rollerduo.jpg" alt="">
+                    <p>ROLLER DUO</p>
+                    <button>DESCARGAR</button>                  
+                </figure>
+                <figure class="container-figure">
+                    <img src="./assets/img/roller normal.png" alt="">
+                    <p>ROLLER  <br> NORMAL</p>    
+                    <button>DESCARGAR</button>              
+                </figure>  
+                <figure class="container-figure">
+                    <img src="./assets/img/persianahorizontales.jpg" alt="">
+                    <p>PERSIANAS  <br> HORIZONTALES</p> 
+                    <button>DESCARGAR</button>                
+                </figure>           
+                <figure class="container-figure">
+                    <img src="./assets/img/persianaverticales.jpg" alt="">
+                    <p>PERSIANAS <BR></BR>VERTICALES</p>
+                    <button>DESCARGAR</button>                   
+                </figure> 
+                <figure class="container-figure">
+                    <img src="./assets/img/cortinas.png" alt="">
+                    <p>CORTINAS</p>  
+                    <button>DESCARGAR</button>               
+                </figure>
+                <figure class="container-figure">
+                    <img src="./assets/img/imgstores.jpg" alt="">
+                    <p>ESTORES</p>
+                    <button>DESCARGAR</button>                  
+                </figure> 
+                <figure class="container-figure">
+                    <img src="./assets/img/soportes.png" alt="">
+                    <p>SOPORTES</p>
+                    <button>DESCARGAR</button>                    
+                </figure>
+                <figure class="container-figure">
+                    <img src="./assets/img/accesorios.jpg" alt="">
+                    <p>ACCESORIOS</p>
+                    <button>DESCARGAR</button>                   
+                </figure>
+
+            </div>
+            
+        </article>
+           
+    </main>
+</body>
+</html>
+
+
+<script>
+    function cargarContenido(url) {
+        fetch(url)
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('contenido').innerHTML = data;
+            })
+            .catch(error => console.error('Error al cargar el contenido:', error));
+    }
+
+    document.querySelectorAll('nav a').forEach(enlace => {
+        enlace.addEventListener('click', evento => {
+            evento.preventDefault();
+            const url = enlace.getAttribute('href');
+            cargarContenido(url);
+        });
+    });
+</script>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mark Decord</title>
+    <link rel="stylesheet" href="./mobile.css">
+    <link rel="stylesheet" href="./style/tablet.css" media="(min-width: 768px)">
+    <link rel="stylesheet" href="./style/deskopt.css" media="(min-width: 1024px)">
+    <link rel="stylesheet" href="./style/full.css" media="(min-width: 1900px)">
+    <link rel="stylesheet" href="./style/quienes_somo.css">
+    <link rel="stylesheet" href="./style/catalogo.css">
+    <link rel="stylesheet" href="./style/cotizar.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <main>
+        <article class="main-article--container">
+            <div>
+                <p>Solicita ahora tu cotización gratuita! Rellena nuestro formulario y obtén la mejor opción de transporte adaptada a tus necesidades:</p>
+            </div>
+            <div>        
+                <form action="">
+                    <label for="nombre">
+                        <input type="text" id="nombre" placeholder="Nombre*">
+                    </label>
+                    <label for="correo">
+                        <input type="email" id="correo" placeholder="Correo*">
+                    </label>
+                    <label for="telefono">
+                        <input type="tel" id="telefono" placeholder="Teléfono*">
+                    </label>
+                    <label for="producto">
+                        <input type="text" id="producto" placeholder="Tipo De Producto*">
+                    </label>
+                    <label for="material">
+                        <input type="text" id="material" placeholder="Material*">
+                    </label>
+                    <p>OTROS DETALLES DEL PRODUCTO (OPCIONAL)</p>
+                    <label class="form-labe--contenido" for="contenido">
+                        <input type="text" id="contenido" placeholder="Escribe aqui otros detalles de tu pedido*">
+                    </label>
+                </form>
+                <button>ENVIAR</button>
+                
+            </div>
+
+           
+            
+            <!--
+                form = Indica al programa que viene un formulario
+                label = sirve para crear una variable
+                    for : variable
+                span = pones una pregunta  antes de la barra del formulario
+                input = agrega que tipo de formulario quieres 
+                    type : 
+                        text : agregar texto
+                        date : agrega calendario
+                        time : agrega reloj
+                        id : variable igual al for
+                placeholder = agrega contedio en los cuadros, para darle una idea al usuario de que debe llenar
+            -->   
+
+        </article>        
+    </main>
+</body>
+</html>
+
+
+<script>
+    function cargarContenido(url) {
+        fetch(url)
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('contenido').innerHTML = data;
+            })
+            .catch(error => console.error('Error al cargar el contenido:', error));
+    }
+
+    document.querySelectorAll('nav a').forEach(enlace => {
+        enlace.addEventListener('click', evento => {
+            evento.preventDefault();
+            const url = enlace.getAttribute('href');
+            cargarContenido(url);
+        });
+    });
+</script>

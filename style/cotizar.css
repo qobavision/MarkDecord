@@ -1,0 +1,64 @@
+:root {
+    /* COLORES */
+    --main-color: rgb(216, 44, 81);
+    --second-color:rgb(7, 146, 77);
+    --soft-blue:rgb(18, 164, 201);
+    --blakc : black;
+    --grey:#bababa;
+    --off-white: #f4f8f7;
+    --soft-rosa :rgb(255, 217, 242);
+    --warm-black :#201e1c  ;
+    --celeste-final :rgb(210, 245, 233);
+}
+main {
+    text-align: center;
+    background-color: rgb(230,200,200);
+
+}
+.main-article--container { 
+width: 90%;
+padding: 5%;
+height: auto;
+margin: 0 auto;
+}
+.main-article--container p {
+    width: 100%;
+    display: block;   
+    margin: 30px 0;
+    font-size: 2rem;
+    font-weight: initial;
+    color: var(--warm-black);
+}
+.main-article--container form label {
+    width: 100%;
+    margin-bottom: 10px; /* Espacio entre las etiquetas */
+}
+.main-article--container form {
+    height: auto;
+    margin: 0 auto;
+    display: i;
+}
+
+.main-article--container form input[type="text"],
+.main-article--container form input[type="email"],
+.main-article--container form input[type="tel"] {
+    width: 100%; /* Ocupa todo el ancho disponible */; /* Establece un ancho máximo */
+    height: 4rem;
+    padding: 5px; /* Ajusta el relleno */
+    margin-bottom: 30px; /* Espacio entre los campos */
+    background-color: transparent;
+    border: 1.5px solid var(--main-color);
+    font-size: 1.5rem;
+}
+.main-article--container .form-labe--contenido input[type="text"] {
+    height: 15rem;
+}
+.main-article--container button {
+    background-color: var(--main-color);
+    padding: 10px;
+    width: 80px;
+    border-radius: 5px;
+    color: #f4f8f7;
+    border: none;
+    font-size: 1.3rem;
+}

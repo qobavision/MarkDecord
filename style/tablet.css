@@ -1,0 +1,57 @@
+header {
+    height: 450px;
+}
+.header--title-container .header--button {
+margin-top: 0;
+top: 425px;
+}
+/*************************************/
+.main-exchange-container .backgroundImg {
+    height: 500px;
+}
+/*************************************/
+.product-cards--container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 768px;
+    margin: 0 auto;
+}
+.product-detail--card {
+    width: 100%;
+    height: auto;
+    max-width: 320px;
+    min-width: 200px;
+}
+
+.footer-section-container {
+    width: 100%;
+}
+.footer-section--main {
+    display: flex;
+    margin: 0 auto;
+    max-width: 810px;
+}
+.footer-section--siguenos {
+    padding-top: 39px;
+}
+.footer-section--book {
+    display: none;
+}
+.main--container--tiktok .main--container--figure{
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+.main--container--tiktok .main-video {
+    width: 700px;
+}
+.main--container--tiktok .main-video video {
+    display: inline-block;
+    width: 300px;
+    height: auto;
+}
+.footer--one-video {
+    margin-right: 40px;
+}

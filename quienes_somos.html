@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mark Decord</title>
+    <link rel="stylesheet" href="./mobile.css">
+    <link rel="stylesheet" href="./style/tablet.css" media="(min-width: 768px)">
+    <link rel="stylesheet" href="./style/deskopt.css" media="(min-width: 1024px)">
+    <link rel="stylesheet" href="./style/full.css" media="(min-width: 1900px)">
+    <link rel="stylesheet" href="./style/quienes_somo.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <main>
+        <section class="container-main-quienes_somos">
+            <figure class="main-quienes_somos--img">
+                <img src="./assets/img/fotoquienesomos.jpg" alt="">
+            </figure>
+            <div class="main-container--nostros">
+                <h2>SOBRE NOSOTROS</h2>
+                <p>
+                    MarkDecord es una marca registrada en el rubro de decoración de interiores y pertenece a la empresa "MarkDecord S.A.C", con RUC N° XXXXXXXXXX. <br> <br>
+            
+                    Nuestro equipo está compuesto por expertos con más de una década de experiencia en el sector de decoración de interiores, lo que nos capacita para ofrecer un servicio de alta calidad. Contamos con una amplia gama de productos, incluyendo cortinas, tapizados, persianas, roller y estores, todos diseñados para satisfacer las necesidades y exigencias de cualquier proyecto de decoración que tengas en mente. <br> <br>
+                            
+                    Nuestros instaladores altamente calificados y experimentados garantizan un proceso de instalación sin contratiempos, asegurando que tu espacio quede perfectamente decorado y funcional. Nos comprometemos a brindarte un servicio puntual y eficiente en cada etapa del proceso.
+                </p>       
+                 <a  id="botoncotizar" href="">COTIZAR</a>     
+            </div>              
+           
+        </section>
+
+        <section class="container-main--vision">
+            <div class="container-div-vision">
+                <img src="./assets/icons/mision.svg" alt="">
+                <h2>MISION</h2>
+                <p>
+                    Con una amplia gama de productos y un equipo de instaladores altamente capacitados, buscamos brindar una experiencia cómoda y placentera en cada proyecto. Nuestro objetivo es convertir tus espacios en lugares acogedores y elegantes que reflejen tu estilo único.
+                </p>
+            </div>
+            <div class="container-div-mision">
+                       
+                <img src="./assets/icons/vision.svg" alt="">
+                <h2>VISION</h2>
+                <p>Nos esforzamos por generar un impacto positivo en la sociedad, transformando hogares y espacios comerciales en ambientes acogedores y elegantes que reflejen la personalidad y el estilo de vida de nuestros clientes.</p>        
+            </div> 
+            <div class="container-div-valores">
+                
+                <img src="./assets/icons/valores.svg" alt="">
+                <h2>VALORES</h2>
+                <p>Valores  <br>
+                    -Compromiso con la seguridad. <br>
+                    -Excelencia en el servicio. <br>
+                    -Responsabilidad. <br>
+                    -Puntualidad. <br>
+                    -Innovación. 
+                </p> 
+                
+            </div>                          
+        </section>
+        <section class="container-main-conocenos">
+            <div>
+                <h2>CONÓCENOS</h2>
+                <p>Nuestro equipo de decoradores se dedica a crear experiencias únicas y memorables. Nos esforzamos por ofrecerte un servicio personalizado que refleje autenticidad y estilo en cada proyecto.</p>
+            </div>
+            <article class="container-article-fotos">
+                <div class="container-div-valores--ronald">
+                    <img src="./assets/img/ronald.jpg" alt="">
+                    <h2>Ronald Gómez</h2>
+                    <p>Nos apasiona ofrecer soluciones excepcionales en decoración de interiores y ser el mejor aliado para nuestros clientes.</p>
+                </div>
+                <div class="container-div-valores--huerfanita">
+                    <img src="./assets/img/herfanita.jpg" alt="">
+                    <h2>Margarita Arce</h2>
+                    <p>Nuestros principales compromisos son la seguridad, la puntualidad y la comodidad en cada proyecto de decoración de interiores.</p>
+                </div>
+                <div class="container-div-valores--rita">
+                    <img src="./assets/img/rita.jpg" alt="">
+                    <h2>Rita Arce</h2>
+                    <p>Nuestra dedicación es entender las necesidades de nuestros clientes para brindarles una experiencia excepcional en decoración de interiores.</p>
+                </div>
+                
+            </article>
+            <div class="container-quienes--video">
+                <video controls preload="" src="./assets/video/trheevideo.mp4"></video>
+            </div>
+            
+        </section>    
+        <section class="container-main--conversemos">
+            <div class="container-conversemos-div">
+                <h2>CONVERSEMOS</h2>
+                <p>Nuestros asesores expertos están siempre disponibles para ayudarte a elegir los productos más adecuados para tu proyecto de decoración y garantizarte una experiencia satisfactoria en cada etapa del proceso.</p>
+                <a href="">DESEO UN ASESOR VIRTUAL</a>
+            </div>
+           
+        </section>
+    </main>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const cotizarButton = document.querySelector("#cotizar");
+    
+            cotizarButton.addEventListener("click", () => {
+                cargarContenido("./cotizar.html #botoncotizar"); // Aquí se agrega "#contenido" para cargar solo el contenido relevante de cotizar.html
+            });
+        });
+    </script>
+    
+</body>
+</html>
+
+
+<script>
+    function cargarContenido(url) {
+        fetch(url)
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('contenido').innerHTML = data;
+            })
+            .catch(error => console.error('Error al cargar el contenido:', error));
+    }
+
+    document.querySelectorAll('nav a').forEach(enlace => {
+        enlace.addEventListener('click', evento => {
+            evento.preventDefault();
+            const url = enlace.getAttribute('href');
+            cargarContenido(url);
+        });
+    }); 
+</script>
